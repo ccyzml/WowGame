@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="wrap_content"
+    android:layout_height="54dp"
+    android:padding="4dp"
+    android:gravity="center_vertical"
+    android:background="@android:drawable/screen_background_dark_transparent"
+    >
+
+    <FrameLayout
+        android:padding="2dp"
+        android:background="@color/violet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@mipmap/freezing_breath"/>
+
+    </FrameLayout>
+
+
+    <View
+        android:layout_marginLeft="4dp"
+        android:layout_width="1dp"
+        android:layout_height="48dp"
+        android:background="@color/white"/>
+
+    <TextView
+        android:layout_marginRight="10dp"
+        android:id="@+id/name"
+        android:textColor="@color/white"
+        android:text="逐风者之剑"
+        android:textSize="16dp"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

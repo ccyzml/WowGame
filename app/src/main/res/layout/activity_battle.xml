@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/root">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:drawable/screen_background_dark_transparent"/>
+
+    <FrameLayout
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <FrameLayout
+            android:layout_gravity="right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:id="@+id/monster_img"
+                android:layout_gravity="center_vertical"
+                android:layout_width="140dp"
+                android:layout_height="210dp"
+                android:src="@mipmap/border"
+                android:background="@mipmap/death_wing"/>
+
+           <com.nju.meanlay.wowgame.View.AttackTipView
+               android:layout_gravity="center_vertical"
+               android:visibility="invisible"
+               android:id="@+id/player_attack_tip"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"/>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:id="@+id/player_img"
+                android:layout_gravity="center_vertical"
+                android:layout_width="140dp"
+                android:layout_height="210dp"
+                android:background="@mipmap/khadgar"
+                android:src="@mipmap/border"/>
+
+            <com.nju.meanlay.wowgame.View.AttackTipView
+                android:id="@+id/enemy_attack_tip"
+                android:layout_gravity="center_vertical"
+                android:visibility="invisible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </FrameLayout>
+
+
+
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.nju.meanlay.wowgame.View.CharacterIndication
+            android:id="@+id/player_indication"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="wrap_content"/>
+
+
+        <com.nju.meanlay.wowgame.View.CharacterIndication
+            android:id="@+id/monster_indication"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+
+
+    </LinearLayout>
+
+    <com.nju.meanlay.wowgame.View.GameProgressBar
+        android:visibility="invisible"
+        android:layout_marginTop="100dp"
+        android:layout_gravity="center"
+        android:id="@+id/abilityIndication"
+        style="@style/HpProgressBar"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:minHeight="12dp" />
+
+    <LinearLayout
+        android:id="@+id/btn_root"
+        android:layout_gravity="bottom|right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.nju.meanlay.wowgame.View.AbilityButton
+            style="@style/AbilityButton"
+            android:id="@+id/ability_1_btn" />
+
+        <com.nju.meanlay.wowgame.View.AbilityButton
+            style="@style/AbilityButton"
+            android:id="@+id/ability_2_btn" />
+
+        <com.nju.meanlay.wowgame.View.AbilityButton
+            style="@style/AbilityButton"
+            android:id="@+id/ability_3_btn" />
+
+        <com.nju.meanlay.wowgame.View.AbilityButton
+            style="@style/AbilityButton"
+            android:id="@+id/ability_4_btn" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:visibility="invisible"
+        android:gravity="center_horizontal"
+        android:padding="30dp"
+        android:id="@+id/over_scene"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@android:drawable/screen_background_dark_transparent">
+
+        <TextView
+            android:id="@+id/over_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="You Win"
+            android:textColor="@color/white"
+            android:textSize="45dp" />
+
+        <View
+            android:id="@+id/divide_1"
+            android:layout_width="500dp"
+            android:layout_height="0.5dp"
+            android:background="@color/white"/>
+
+        <TextView
+            android:id="@+id/experience"
+            android:textSize="25dp"
+            android:layout_marginTop="15dp"
+            android:layout_below="@id/divide_1"
+            android:text="你获得了500点经验"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <View
+            android:layout_marginTop="15dp"
+            android:layout_width="300dp"
+            android:layout_height="0.5dp"
+            android:background="@color/white"/>
+
+
+
+
+        <LinearLayout
+            android:id="@+id/equipment_container"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+        </LinearLayout>
+
+
+
+        <Button
+            android:text="完成"
+            android:id="@+id/over"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp" />
+    </LinearLayout>
+
+
+</FrameLayout>

@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.MainActivity">
+
+
+    <LinearLayout
+        android:background="@android:drawable/screen_background_dark_transparent"
+        android:padding="10dp"
+        android:id="@+id/select_hero"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <FrameLayout
+            android:padding="10dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:id="@+id/master"
+                android:scaleType="centerCrop"
+                android:layout_height="match_parent"
+                android:src="@mipmap/khadgar"/>
+
+
+            <TextView
+                android:text="卡德加"
+                android:textColor="@color/white"
+                android:textSize="30dp"
+                android:background="@android:drawable/screen_background_dark_transparent"
+                android:gravity="center"
+                android:layout_gravity="bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:padding="10dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:id="@+id/warrior"
+                android:scaleType="centerCrop"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@mipmap/varian"/>
+
+
+
+            <TextView
+                android:text="瓦里安国王"
+                android:textColor="@color/white"
+                android:textSize="30dp"
+                android:background="@android:drawable/screen_background_dark_transparent"
+                android:gravity="center"
+                android:layout_gravity="bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:padding="10dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/paladin"
+                android:scaleType="centerCrop"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@mipmap/uther"/>
+
+
+            <TextView
+                android:text="佛丁"
+                android:textColor="@color/white"
+                android:textSize="30dp"
+                android:background="@android:drawable/screen_background_dark_transparent"
+                android:gravity="center"
+                android:layout_gravity="bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </FrameLayout>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/select_dungeon"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:id="@+id/img_hero"
+                android:layout_width="200dp"
+                android:layout_height="match_parent" />
+
+            <LinearLayout
+                android:id="@+id/equipment_docker"
+                android:background="@color/gray_transparent"
+                android:layout_gravity="bottom"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="80dp"
+                android:orientation="horizontal">
+
+
+            </LinearLayout>
+
+        </FrameLayout>
+        <LinearLayout
+            android:padding="10dp"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:background="@android:drawable/screen_background_dark_transparent"
+            android:orientation="vertical">
+
+            <TextView
+                android:textColor="@color/white"
+                android:id="@+id/level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="等级： 1"/>
+
+            <TextView
+                android:textColor="@color/white"
+                android:id="@+id/experience"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="经验值："/>
+
+            <TextView
+                android:textColor="@color/white"
+                android:id="@+id/hp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="HP： 100"/>
+
+            <TextView
+                android:textColor="@color/white"
+                android:id="@+id/mp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MP： 100"/>
+
+            <TextView
+                android:textColor="@color/white"
+                android:id="@+id/critical_rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="暴击率:"/>
+
+            <TextView
+                android:textColor="@color/white"
+                android:id="@+id/spell_power"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="法术强度："/>
+
+            <TextView
+                android:textColor="@color/white"
+                android:id="@+id/march_power"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="物理强度："/>
+
+            <TextView
+                android:textColor="@color/white"
+                android:id="@+id/armor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="护甲："/>
+
+
+            <com.nju.meanlay.wowgame.View.AbilityIntroView
+                android:id="@+id/ability_intro_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+            <com.nju.meanlay.wowgame.View.AbilityIntroView
+                android:id="@+id/ability_intro_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+            <com.nju.meanlay.wowgame.View.AbilityIntroView
+                android:id="@+id/ability_intro_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+            <com.nju.meanlay.wowgame.View.AbilityIntroView
+                android:id="@+id/ability_intro_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:textSize="10dp"
+                    android:id="@+id/open_package"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="背包"/>
+
+                <Button
+                    android:textSize="10dp"
+                    android:id="@+id/shop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="商店"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:background="@android:drawable/screen_background_dark_transparent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ListView
+                android:id="@+id/dungeon_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></ListView>
+
+            <ListView
+                android:visibility="gone"
+                android:id="@+id/package_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></ListView>
+        </FrameLayout>
+
+    </LinearLayout>
+
+
+
+</FrameLayout>

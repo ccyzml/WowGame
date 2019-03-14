@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@mipmap/death_wing_icon"
+        android:src="@mipmap/border_square"/>
+
+    <LinearLayout
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.nju.meanlay.wowgame.View.GameProgressBar
+            android:id="@+id/hp"
+            style="@style/HpProgressBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="12dp" />
+
+        <com.nju.meanlay.wowgame.View.GameProgressBar
+            android:id="@+id/mp"
+            style="@style/MpProgressBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="12dp" />
+
+        <GridView
+            android:columnWidth="25dp"
+            android:horizontalSpacing="0dp"
+            android:numColumns="auto_fit"
+            android:id="@+id/buff_container"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+        </GridView>
+
+    </LinearLayout>
+
+</LinearLayout>
