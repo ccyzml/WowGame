@@ -5,6 +5,7 @@ import com.nju.meanlay.wowgame.GameData.Ability.BodyAttack;
 import com.nju.meanlay.wowgame.GameData.Character.BaseCharacter;
 import com.nju.meanlay.wowgame.GameData.Character.NPC;
 import com.nju.meanlay.wowgame.GameData.Equipment.BaseEquipment;
+import com.nju.meanlay.wowgame.GameData.Equipment.Glave;
 import com.nju.meanlay.wowgame.R;
 
 public class Arthas extends SimpleMonster {
@@ -26,7 +27,7 @@ public class Arthas extends SimpleMonster {
 
     @Override
     public BaseEquipment getDefeatEquipment() {
-        return null;
+        return new Glave();
     }
 
 

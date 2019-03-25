@@ -18,7 +18,7 @@ public class DeathWing extends BaseCharacter implements NPC,Runnable {
         Ability[] abilities = new Ability[4];
         abilities[0] = new BodyAttack();
         getCharacterAttribute().setAbilities(abilities);
-        getCharacterAttribute().setHp(10000);
+        getCharacterAttribute().setHp(20000);
         setImgResourceId(R.mipmap.death_wing);
         setIconResourceId(R.mipmap.death_wing_icon);
     }

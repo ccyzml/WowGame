@@ -89,6 +89,7 @@ public class BattleActivity extends AppCompatActivity {
     public static final int OVER = 2;
     public static final int TIP_UPDATE = 3;
 
+    private Toast toast;
     private BaseDungeon dungeon;
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -101,13 +102,14 @@ public class BattleActivity extends AppCompatActivity {
         battle = new Battle();
         player = new BattleCharacter(Player.getInstance().getPlayerCharacter());
         monster = new BattleCharacter(dungeon.getMonster());
+        toast = Toast.makeText(BattleActivity.this, "还在冷却", Toast.LENGTH_SHORT);
 
         battle.setMonster(monster);
         battle.setPlayer(player);
         battle.setBattleListener(new BattleListener() {
             @Override
             public void stateUpdate(BattleSettlement battleSettlement) {
-                Message msg = new Message();
+                Message msg = Message.obtain();
                 msg.what = TIP_UPDATE;
                 msg.obj = battleSettlement;
                 handler.sendMessage(msg);
@@ -126,7 +128,7 @@ public class BattleActivity extends AppCompatActivity {
 
             @Override
             public void renderUI(TimerCellHolder timerCellHolder) {
-                Message msg = new Message();
+                Message msg = Message.obtain();
                 msg.what = RENDER_UI;
                 msg.obj = timerCellHolder;
                 handler.sendMessage(msg);
@@ -136,7 +138,7 @@ public class BattleActivity extends AppCompatActivity {
 
             @Override
             public void isOver(int over) {
-                Message msg = new Message();
+                Message msg = Message.obtain();
                 if (over != Battle.NOT_OVER) {
                     msg.what = OVER;
                     msg.arg1 = over;
@@ -146,7 +148,7 @@ public class BattleActivity extends AppCompatActivity {
 
             @Override
             public void isAbilitySuccessful(Boolean success) {
-                Toast toast = Toast.makeText(BattleActivity.this, "还在冷却", Toast.LENGTH_SHORT);
+
                 if (!success) {
                     toast.show();
                 } else {
@@ -241,6 +243,7 @@ public class BattleActivity extends AppCompatActivity {
 
     @Override
     protected void onDestroy() {
+        toast.cancel();
         super.onDestroy();
     }
 
